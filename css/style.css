@@ -76,7 +76,9 @@ body {
   font-size: 24px;
   line-height: 33px;
   font-weight: 400;
-  color: #2D2929; }
+  color: #2D2929;
+  background-color: #F5F5F5;
+  max-width: 100%; }
 
 a {
   text-decoration: none; }
@@ -182,20 +184,21 @@ img {
 @media (min-width: 1100px) {
   .header {
     background-image: url("../img/backFirst.jpg");
-    padding-bottom: 30px;
-    background-position: top; }
+    padding-bottom: 30px; }
   .header__wrap {
     padding-top: 30px;
-    padding-left: 100px; }
+    padding-left: 162px; }
   .header__logo {
     width: 15%;
     height: 15%; }
   .header__title-wrap {
-    width: 50%; }
+    width: 52%;
+    margin-bottom: 100px; }
   .header__title {
     margin-bottom: 25px;
     font-size: 48px; }
   .header__text {
+    padding: 0;
     font-size: 0.9em;
     text-align: center; }
   .header__link {
@@ -264,8 +267,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    font-size: 0.9em;
-    margin-top: 20px; }
+    font-size: 0.9em; }
   .programm-list__elem {
     font-family: "Open Sans", "Calibri", sans-serif;
     font-weight: 700;
@@ -292,28 +294,26 @@ img {
       background-color: #F57D6E;
       border-radius: 80px;
       background-position: center;
-      background-repeat: no-repeat; }
-    .programm-list__elem--ileader::after {
-      background-image: url("../img/iLeader.svg");
+      background-repeat: no-repeat;
       background-size: 43px 43px; }
+    .programm-list__elem--ileader::after {
+      background-image: url("../img/iLeader.svg"); }
     .programm-list__elem--team::after {
       background-image: url("../img/team.svg");
       background-size: 45px 50px; }
     .programm-list__elem--finance::after {
       left: 61%;
-      background-image: url("../img/finance.svg");
-      background-size: 43px 43px; }
+      background-image: url("../img/finance.svg"); }
     .programm-list__elem--desing-thinking::after {
       left: 22%;
-      background-image: url("../img/design_thinking.svg");
-      background-size: 43px 43px; }
+      background-image: url("../img/design_thinking.svg"); }
     .programm-list__elem--system-thinking::after {
-      background-image: url("../img/system_thinking.svg");
-      background-size: 43px 43px; }
+      background-image: url("../img/system_thinking.svg"); }
   .programm-list__text {
     text-align: center;
     margin-top: 105px;
-    padding-left: 0; } }
+    padding-left: 0;
+    padding-right: 0; } }
 
 .how-do {
   display: none; }
@@ -341,7 +341,7 @@ img {
     line-height: 52px; } }
 
 .about-programm {
-  background-image: url("../img/back_second.png");
+  background-image: url("../img/back_second.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -439,14 +439,15 @@ img {
   padding-top: 25px;
   padding-left: 20px;
   padding-bottom: 25px;
-  padding-right: 30px;
+  padding-right: 33%;
   letter-spacing: -1px; }
 
 .list__text {
   display: none; }
 
 .list__wrap {
-  margin-top: auto; }
+  margin-top: auto;
+  padding-top: 10px; }
   .list__wrap--team {
     background-color: rgba(40, 199, 250, 0.5); }
   .list__wrap--finance {
@@ -457,6 +458,14 @@ img {
     background-color: rgba(255, 48, 79, 0.5); }
   .list__wrap--leader {
     background-color: rgba(33, 230, 193, 0.5); }
+
+.list__logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px; }
+  .list__logo--team {
+    width: 26px;
+    height: 28px; }
 
 .list__popup {
   display: none; }
@@ -472,6 +481,7 @@ img {
             justify-content: space-evenly;
     padding: 0 10%; }
   .list__elem {
+    position: relative;
     width: 366px;
     margin-bottom: 40px; }
     .list__elem--system-think {
@@ -481,29 +491,45 @@ img {
       margin-right: auto; }
   .list__title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 22px;
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 70px;
-    text-align: left;
-    letter-spacing: -2px; }
+    text-align: left; }
   .list__text {
     display: block;
-    padding-top: 12px;
+    padding-top: 0;
     padding-bottom: 33px;
     font-size: 18px;
+    line-height: 26px;
     padding-left: 30px;
     padding-right: 30px;
     text-align: left;
     letter-spacing: -1px; }
   .list__wrap {
-    cursor: pointer; }
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .list__wrap--team {
+      padding-top: 6.5px;
+      padding-bottom: 6.5px; }
   .list__logo {
+    width: 37px;
+    height: 37px;
     margin-left: 30px; }
+    .list__logo--team {
+      width: 39px;
+      height: 44px; }
   .list__popup {
     display: none;
+    position: absolute;
+    background-color: #2D2929;
+    max-width: 366px;
+    height: 230px;
     padding: 12px 30px;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 17px;
     letter-spacing: -1px; } }
 
 .trainers {
