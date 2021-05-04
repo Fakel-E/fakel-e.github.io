@@ -10,78 +10,338 @@
 
 </head>
 <body>
-  <main>
-    <section class="record">
-      <div class="record__wrap">
-        <img class="record__logo" src="img/logo2.png" alt="логотип программы" width="326" height="41">
+  <div class="calendar">
+    <header class="calendar__header">
+      <div class="header__wrap">
+        <a href="index.html">
+          <img class="header__logo" src="img/logo2.png" alt="логотип программы" width="326" height="41">
+        </a>
       </div>
+      <h2 class="calendar__title">Выбери модуль</h2>
+    </header>
 
-      <h2 class="record__title">Выбери модуль</h2>
-      <div class="record__calendar--wrap">
-        <ul class="record__list list-pm">
-          <li class="list-pm__elem">
-            <h3 class="list-pm__title">Развивающее управление людьми</h3>
-            <div class="list-pm__wrap">
-              <img class="list-pm__logo" src="img/team.svg" alt="управление командой" width="58" height="57">
-            </div>
+    <div class="calendar__wrap">
+      <section class="programm-record">
+        <ul class="programm-record__list record-list">
+          <li class="record-list__elem record-list__elem--leader">
+            <h3 class="record-list__title">Я - лидер</h3>
+            <button type="button" class="record-list__wrap record-list__wrap--leader">
+              <img class="record-list__logo" src="img/iLeader1.svg" alt="я лидер" width="58" height="57">
+            </button>
           </li>
-          <li class="record__elem">
-            <h3 class="list-pm__title">Финансы для нефинансистов</h3>
-            <div class="list-pm__wrap">
-              <img class="list-pm__logo" src="img/finance.svg" alt="финансы" width="58" height="57">
-            </div>
+          <li class="record-list__elem record-list__elem--finance">
+            <h3 class="record-list__title">Финансы и Банкинг</h3>
+            <button type="button" class="record-list__wrap record-list__wrap--finance">
+              <img class="record-list__logo" src="img/finance1.svg" alt="финансы" width="58" height="57">
+            </button>
           </li>
-          <li class="record__elem">
-            <h3 class="list-pm__title">Системное мышление и принятие решений</h3>
-            <div class="list-pm__wrap">
-              <img class="list-pm__logo" src="img/system_thinking.svg" alt="системное мышление" width="58" height="57">
-            </div>
+          <li class="record-list__elem record-list__elem--desing-think">
+            <h3 class="record-list__title">Дизайн-мышление</h3>
+            <button type="button" class="record-list__wrap record-list__wrap--desing-think">
+              <img class="record-list__logo" src="img/design_thinking1.svg" alt="дизайн-мышление" width="58" height="57">
+            </button>
           </li>
-          <li class="record__elem">
-            <h3 class="list-pm__title">Дизайн-мышление</h3>
-            <div class="list-pm__wrap">
-              <img class="list-pm__logo" src="img/design_thinking.svg" alt="дизайн-мышление" width="58" height="57">
-            </div>
+          <li class="record-list__elem record-list__elem--system-think">
+            <h3 class="record-list__title">Системное мышление  при принятии решений</h3>
+            <button type="button" class="record-list__wrap record-list__wrap--system-think">
+              <img class="record-list__logo" src="img/system_thinking1.svg" alt="системное мышление" width="58" height="57">
+            </button>
           </li>
-          <li class="record__elem">
-            <h3 class="list-pm__title">Я - лидер</h3>
-            <div class="list-pm__wrap">
-              <img class="list-pm__logo" src="img/iLeader.svg" alt="я лидер" width="58" height="57">
-            </div>
+          <li class="record-list__elem record-list__elem--team">
+            <h3 class="record-list__title">Развивающее <br> управление людьми</h3>
+            <button type="button" class="record-list__wrap record-list__wrap--team">
+              <img class="record-list__logo record-list__logo--team" src="img/team1.svg" alt="управление командой" width="58" height="57">
+            </button>
           </li>
         </ul>
+      </section>
 
-        <div class="record__calendar" align="center">
-          <div class="calendar">
-            <table class="calendar__body" id="calendar" border="0" cellspacing="0" cellpadding="1">
-              <thead>
-                <tr>
-                  <td class="calendar__arrow"><b>‹</b></td>
-                  <td class="calendar__month" colspan="5"></td>
-                  <td class="calendar__arrow"><b>›</b></td>
-                </tr>
-                <tr>
-                  <td class="calendar__day">ПН</td>
-                  <td class="calendar__day">ВТ</td>
-                  <td class="calendar__day">СР</td>
-                  <td class="calendar__day">ЧТ</td>
-                  <td class="calendar__day">ПТ</td>
-                  <td class="calendar__day">СБ</td>
-                  <td class="calendar__day">ВС</td>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <p>какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст
-            какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст
-            какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст
-            какой-то текст какой-то текст какой-то текст </p>
-        </div>
-      </div>
-      <button class="record__btn" type="submit">Записаться</button>
-    </section>
-  </main>
+      <section class="record-form">
+          <h3 class="form__title">Выбери дату старта модуля</h3>
+
+          <form class="form" action="#" method="post">
+            <div class="form__frame form__frame--leader">
+              <div class="form__block">
+                <p class="form__wrap form__wrap--first-group">
+                  <input type="radio" name="group" id="first-leader" class="form__item">
+                  <label for="first-leader" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--first">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--second-group">
+                  <input type="radio" name="group" id="second-leader" class="form__item">
+                  <label for="second-leader" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--second">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--third-group">
+                  <input type="radio" name="group" id="third-leader" class="form__item">
+                  <label for="third-leader" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--third">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--fourth-group">
+                  <input type="radio" name="group" id="fourth-leader" class="form__item">
+                  <label for="fourth-leader" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--fourth">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+              </div>
+
+              <button type="submit" class="form__btn">Записаться</button>
+
+              <p class="form__description">
+                После того, как ты выберешь дату старта модуля, тебе на почту придет информация с графиком вебинаров по выбранному модулю
+              </p>
+            </div>
+          </form>
+
+          <form class="form" action="#" method="post">
+            <div class="form__frame form__frame--finance">
+              <div class="form__block">
+                <p class="form__wrap form__wrap--first-group">
+                  <input type="radio" name="group" id="first-finance" class="form__item">
+                  <label for="first-finance" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--first">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--second-group">
+                  <input type="radio" name="group" id="second-finance" class="form__item">
+                  <label for="second-finance" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--second">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--third-group">
+                  <input type="radio" name="group" id="third-finance" class="form__item">
+                  <label for="third-finance" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--third">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--fourth-group">
+                  <input type="radio" name="group" id="fourth-finance" class="form__item">
+                  <label for="fourth-finance" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--fourth">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+              </div>
+
+              <button type="submit" class="form__btn">Записаться</button>
+
+              <p class="form__description">
+                После того, как ты выберешь дату старта модуля, тебе на почту придет информация с графиком вебинаров по выбранному модулю
+              </p>
+            </div>
+          </form>
+
+          <form class="form" action="#" method="post">
+            <div class="form__frame form__frame--desing-think">
+              <div class="form__block">
+                <p class="form__wrap form__wrap--first-group">
+                  <input type="radio" name="group" id="first-desing-think" class="form__item">
+                  <label for="first-desing-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--first">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--second-group">
+                  <input type="radio" name="group" id="second-desing-think" class="form__item">
+                  <label for="second-desing-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--second">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--third-group">
+                  <input type="radio" name="group" id="third-desing-think" class="form__item">
+                  <label for="third-desing-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--third">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--fourth-group">
+                  <input type="radio" name="group" id="fourth-desing-think" class="form__item">
+                  <label for="fourth-desing-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--fourth">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+              </div>
+
+              <button type="submit" class="form__btn">Записаться</button>
+
+              <p class="form__description">
+                После того, как ты выберешь дату старта модуля, тебе на почту придет информация с графиком вебинаров по выбранному модулю
+              </p>
+            </div>
+          </form>
+
+          <form class="form" action="#" method="post">
+            <div class="form__frame form__frame--system-think">
+              <div class="form__block">
+                <p class="form__wrap form__wrap--first-group">
+                  <input type="radio" name="group" id="first-system-think" class="form__item">
+                  <label for="first-system-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--first">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--second-group">
+                  <input type="radio" name="group" id="second-system-think" class="form__item">
+                  <label for="second-system-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--second">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--third-group">
+                  <input type="radio" name="group" id="third-system-think" class="form__item">
+                  <label for="third-system-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--third">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--fourth-group">
+                  <input type="radio" name="group" id="fourth-system-think" class="form__item">
+                  <label for="fourth-system-think" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--fourth">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+              </div>
+              <button type="submit" class="form__btn">Записаться</button>
+              <p class="form__description">
+                После того, как ты выберешь дату старта модуля, тебе на почту придет информация с графиком вебинаров по выбранному модулю
+              </p>
+            </div>
+          </form>
+
+          <form class="form" action="#" method="post">
+            <div class="form__frame form__frame--team">
+              <div class="form__block">
+                <p class="form__wrap form__wrap--first-group">
+                  <input type="radio" name="group" id="first-team" class="form__item">
+                  <label for="first-team" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--first">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--second-group">
+                  <input type="radio" name="group" id="second-team" class="form__item">
+                  <label for="second-team" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--second">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--third-group">
+                  <input type="radio" name="group" id="third-team" class="form__item">
+                  <label for="third-system-team" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--third">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+                <p class="form__wrap form__wrap--fourth-group">
+                  <input type="radio" name="group" id="fourth-team" class="form__item">
+                  <label for="fourth-team" class="form__group-text"></label>
+                  <div class="form__time-wrap form__time-wrap--fourth">
+                    <time class="form__time">13 ноября</time>
+                    <time class="form__time">13 декабря</time>
+                    <time class="form__time">13 января</time>
+                    <time class="form__time">13 февраля</time>
+                  </div>
+                </p>
+              </div>
+              <button type="submit" class="form__btn">Записаться</button>
+              <p class="form__description">
+                После того, как ты выберешь дату старта модуля, тебе на почту придет информация с графиком вебинаров по выбранному модулю
+              </p>
+            </div>
+          </form>
+
+      </section>
+    </div>
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__elem">
+          <a class="footer__link" href="mailto:">
+            <img class="footer__logo footer__logo--dep" src="img/logo_dep.png" alt="логотип департамента" width="422" height="53">
+          </a>
+        </li>
+        <li class="footer__elem">
+          <a class="footer__link">
+            <img class="footer__logo footer__logo--od" src="img/logo_od.png" alt="логотип одиссея" width="230" height="22">
+          </a>
+        </li>
+        <li class="footer__elem">
+          <a class="footer__link" href="#">
+            <img class="footer__logo footer__logo--game" src="img/LogoGame.png" alt="логотип игры" width="256" height="46">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
   <script src="js/calendar.js"></script>
 </body>
 </html>
