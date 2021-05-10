@@ -2,24 +2,24 @@
 
 const leader = document.querySelector('.record-list__wrap--leader');
 const finance = document.querySelector('.record-list__wrap--finance');
-const desing = document.querySelector('.record-list__wrap--desing-think');
+const design = document.querySelector('.record-list__wrap--desing-think');
 const system = document.querySelector('.record-list__wrap--system-think');
 const team = document.querySelector('.record-list__wrap--team');
 
 const leaderFrame = document.querySelector('.form__frame--leader');
 const financeFrame = document.querySelector('.form__frame--finance');
-const desingFrame = document.querySelector('.form__frame--desing-think');
+const designFrame = document.querySelector('.form__frame--desing-think');
 const systemFrame = document.querySelector('.form__frame--system-think');
 const teamFrame = document.querySelector('.form__frame--team');
 
 const leaderBorder = document.querySelector('.record-list__elem--leader');
 const financeBorder = document.querySelector('.record-list__elem--finance');
-const desingBorder = document.querySelector('.record-list__elem--desing-think');
+const designBorder = document.querySelector('.record-list__elem--desing-think');
 const systemBorder = document.querySelector('.record-list__elem--system-think');
 const teamBorder = document.querySelector('.record-list__elem--team');
 
-const formArr = [leaderFrame, financeFrame, desingFrame, systemFrame, teamFrame];
-const borderArr = [leaderBorder, financeBorder, desingBorder, systemBorder, teamBorder]
+const formArr = [leaderFrame, financeFrame, designFrame, systemFrame, teamFrame];
+const borderArr = [leaderBorder, financeBorder, designBorder, systemBorder, teamBorder]
 
 const changeElements = (arr, elem, mass, bord) => {
   arr.forEach(element => {
@@ -33,7 +33,7 @@ const changeElements = (arr, elem, mass, bord) => {
     bord.style.border = '3px solid rgba(33, 230, 193, 0.5)';
   } else if (bord === financeBorder) {
     bord.style.border = '3px solid rgba(119, 90, 218, 0.5)';
-  } else if (bord === desingBorder) {
+  } else if (bord === designBorder) {
     bord.style.border = '3px solid rgba(255, 48, 79, 0.5)';
   } else if (bord === systemBorder) {
     bord.style.border = '3px solid rgba(0, 38, 81, 0.5)';
@@ -50,8 +50,8 @@ finance.addEventListener('click', () => {
   changeElements(formArr, financeFrame, borderArr, financeBorder);
 })
 
-desing.addEventListener('click', () => {
-  changeElements(formArr, desingFrame, borderArr, desingBorder);
+design.addEventListener('click', () => {
+  changeElements(formArr, designFrame, borderArr, designBorder);
 })
 
 system.addEventListener('click', () => {
@@ -61,3 +61,96 @@ system.addEventListener('click', () => {
 team.addEventListener('click', () => {
   changeElements(formArr, teamFrame, borderArr, teamBorder);
 })
+
+const formLeader = document.querySelector('.form-leader');
+const leaderGroupOne = formLeader.querySelector('.first-leader');
+const leaderGroupTwo = formLeader.querySelector('.second-leader');
+const leaderGroupThree = formLeader.querySelector('.third-leader');
+const leaderGroupFour = formLeader.querySelector('.fourth-leader');
+
+formLeader.addEventListener('click', () => {
+  if (leaderGroupOne.checked) {
+    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_1';
+  } else if (leaderGroupTwo.checked) {
+    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_2';
+  } else if (leaderGroupThree.checked) {
+    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_3';
+  } else if (leaderGroupFour.checked) {
+    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_4';
+  }
+})
+
+const formFinance = document.querySelector('.form-finance');
+const financeGroupOne = formFinance.querySelector('.first-finance');
+const financeGroupTwo = formFinance.querySelector('.second-finance');
+const financeGroupThree = formFinance.querySelector('.third-finance');
+const financeGroupFour = formFinance.querySelector('.fourth-finance');
+
+formFinance.addEventListener('click', () => {
+  if (financeGroupOne.checked) {
+    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_1';
+  } else if (financeGroupTwo.checked) {
+    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_2';
+  } else if (financeGroupThree.checked) {
+    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_3';
+  } else if (financeGroupFour.checked) {
+    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_4';
+  }
+})
+
+const formDesign = document.querySelector('.form-design');
+const designGroupOne = formDesign.querySelector('.first-design');
+const designGroupTwo = formDesign.querySelector('.second-design');
+const designGroupThree = formDesign.querySelector('.third-design');
+const designGroupFour = formDesign.querySelector('.fourth-design');
+
+formDesign.addEventListener('click', () => {
+  if (designGroupOne.checked) {
+    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_1';
+  } else if (designGroupTwo.checked) {
+    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_2';
+  } else if (designGroupThree.checked) {
+    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_3';
+  } else if (designGroupFour.checked) {
+    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_4';
+  }
+})
+
+const formSystem = document.querySelector('.form-system');
+const systemGroupOne = formSystem.querySelector('.first-system');
+const systemGroupTwo = formSystem.querySelector('.second-system');
+const systemGroupThree = formSystem.querySelector('.third-system');
+const systemGroupFour = formSystem.querySelector('.fourth-system');
+
+formSystem.addEventListener('click', () => {
+  if (systemGroupOne.checked) {
+    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_1';
+  } else if (systemGroupTwo.checked) {
+    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_2';
+  } else if (systemGroupThree.checked) {
+    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_3';
+  } else if (systemGroupFour.checked) {
+    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_4';
+  }
+})
+
+
+const formTeam = document.querySelector('.form-team');
+const teamGroupOne = formTeam.querySelector('.first-team');
+const teamGroupTwo = formTeam.querySelector('.second-team');
+const teamGroupThree = formTeam.querySelector('.third-team');
+const teamGroupFour = formTeam.querySelector('.fourth-team');
+
+formTeam.addEventListener('click', () => {
+  if (teamGroupOne.checked) {
+    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_1';
+  } else if (teamGroupTwo.checked) {
+    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_2';
+  } else if (teamGroupThree.checked) {
+    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_3';
+  } else if (teamGroupFour.checked) {
+    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
+  }
+  console.log(formTeam);
+})
+
