@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Middle Odyssey</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./homecreditnew/landing_middle_odyssey/css/style.css">
 
 </head>
 <body>
@@ -59,6 +59,16 @@
       <section class="record-form">
           <h3 class="form__title">Выбери свою группу</h3>
           <p class="form__text">У каждой группы свой набор дат для обучения. Ты можешь выбрать любую из четырех групп</p>
+
+          <div class="success">
+            <p class="success__message">Ваша заявка успешно принята</p>
+            <button class="form__ok">Хорошо</button>
+          </div>
+
+          <div class="error">
+            <p class="error__message">При подаче заявки возникла ошибка</p>
+            <a href="mailto:evgeniy.semenov@homecredit.ru" class="form__err">Написать организатору</a>
+          </div>
 
           <form class="form form-leader" action="homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_1" method="post">
             <div class="form__frame form__frame--leader">

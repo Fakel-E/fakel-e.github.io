@@ -151,6 +151,62 @@ formTeam.addEventListener('click', () => {
   } else if (teamGroupFour.checked) {
     formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
   }
-  console.log(formTeam);
+})
+
+const URL_SERVER = `homecreditnew/api/odyssey_handler.js.html?request=event`;
+
+const StatusCode = {
+  OK: 200
+};
+const TIMEOUT_IN_MS = 10000;
+
+window.load = (onSuccess, onError) => {
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = `json`;
+
+  xhr.addEventListener(`load`, () => {
+    if (xhr.status === StatusCode.OK) {
+      onSuccess(xhr.response);
+    } else {
+      onError(`Статус ответа: ${xhr.status} ${xhr.statusText}`);
+    }
+  });
+  xhr.addEventListener(`error`, () => {
+    onError(`Произошла ошибка соединения`);
+  });
+  xhr.addEventListener(`timeout`, () => {
+    onError(`Запрос не успел выполниться за ${xhr.timeout}мс`);
+  });
+
+  xhr.timeout = TIMEOUT_IN_MS;
+
+  xhr.open(`GET`, URL_SERVER);
+  xhr.send();
+};
+
+const formBtns = document.querySelectorAll('.form__btn');
+const messageOk = document.querySelector('.success');
+const messageErr = document.querySelector('.error');
+const messageOkBtn = messageOk.querySelector('.form__ok');
+const messageErrBtn = messageErr.querySelector('.form__err');
+
+formBtns.forEach((formBtn) => {
+  formBtn.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    window.load(response);
+    if (response.result === true) {
+      messageOk.style.display = 'block';
+    } else {
+      messageErr.style.display = 'block';
+    }
+  })
+})
+
+messageOkBtn.addEventListener('click', () => {
+  messageOk.style.display = 'none';
+})
+
+messageErrBtn.addEventListener('click', () => {
+  messageErr.style.display = 'none';
 })
 
