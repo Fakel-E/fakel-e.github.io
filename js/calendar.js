@@ -62,6 +62,8 @@ team.addEventListener('click', () => {
   changeElements(formArr, teamFrame, borderArr, teamBorder);
 })
 
+let URL_SERVER = `homecreditnew/api/odyssey_handler.js.html?request=event`;
+
 const formLeader = document.querySelector('.form-leader');
 const leaderGroupOne = formLeader.querySelector('.first-leader');
 const leaderGroupTwo = formLeader.querySelector('.second-leader');
@@ -70,14 +72,15 @@ const leaderGroupFour = formLeader.querySelector('.fourth-leader');
 
 formLeader.addEventListener('click', () => {
   if (leaderGroupOne.checked) {
-    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_1';
   } else if (leaderGroupTwo.checked) {
-    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_2';
   } else if (leaderGroupThree.checked) {
-    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_3';
   } else if (leaderGroupFour.checked) {
-    formLeader.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_4';
   }
+  console.log(URL_SERVER);
 })
 
 const formFinance = document.querySelector('.form-finance');
@@ -88,14 +91,15 @@ const financeGroupFour = formFinance.querySelector('.fourth-finance');
 
 formFinance.addEventListener('click', () => {
   if (financeGroupOne.checked) {
-    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_1';
   } else if (financeGroupTwo.checked) {
-    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_2';
   } else if (financeGroupThree.checked) {
-    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_3';
   } else if (financeGroupFour.checked) {
-    formFinance.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_4';
   }
+  console.log(URL_SERVER);
 })
 
 const formDesign = document.querySelector('.form-design');
@@ -106,14 +110,15 @@ const designGroupFour = formDesign.querySelector('.fourth-design');
 
 formDesign.addEventListener('click', () => {
   if (designGroupOne.checked) {
-    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_1';
   } else if (designGroupTwo.checked) {
-    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_2';
   } else if (designGroupThree.checked) {
-    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_3';
   } else if (designGroupFour.checked) {
-    formDesign.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_4';
   }
+  console.log(URL_SERVER);
 })
 
 const formSystem = document.querySelector('.form-system');
@@ -124,14 +129,15 @@ const systemGroupFour = formSystem.querySelector('.fourth-system');
 
 formSystem.addEventListener('click', () => {
   if (systemGroupOne.checked) {
-    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_1';
   } else if (systemGroupTwo.checked) {
-    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_2';
   } else if (systemGroupThree.checked) {
-    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_3';
   } else if (systemGroupFour.checked) {
-    formSystem.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_4';
   }
+  console.log(URL_SERVER);
 })
 
 
@@ -143,22 +149,34 @@ const teamGroupFour = formTeam.querySelector('.fourth-team');
 
 formTeam.addEventListener('click', () => {
   if (teamGroupOne.checked) {
-    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_1';
   } else if (teamGroupTwo.checked) {
-    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_2';
   } else if (teamGroupThree.checked) {
-    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_3';
   } else if (teamGroupFour.checked) {
-    formTeam.action = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
   }
+  console.log(URL_SERVER);
 })
 
-const URL_SERVER = `homecreditnew/api/odyssey_handler.js.html?request=event`;
 
 const StatusCode = {
   OK: 200
 };
 const TIMEOUT_IN_MS = 10000;
+
+window.upload = (data, onSuccess) => {
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = `json`;
+
+  xhr.addEventListener(`load`, () => {
+    onSuccess(xhr.response);
+  });
+
+  xhr.open(`POST`, URL_SERVER);
+  xhr.send(data);
+};
 
 window.load = (onSuccess, onError) => {
   const xhr = new XMLHttpRequest();
@@ -190,9 +208,22 @@ const messageErr = document.querySelector('.error');
 const messageOkBtn = messageOk.querySelector('.form__ok');
 const messageErrBtn = messageErr.querySelector('.form__err');
 
+
 formBtns.forEach((formBtn) => {
-  formBtn.addEventListener('submit', (evt) => {
+  formBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
+    if (leaderFrame.style.display === 'block') {
+      window.upload(new FormData(formLeader))
+    } else if (financeFrame.style.display === 'block') {
+      window.upload(new FormData(formFinance))
+    } else if (designFrame.style.display === 'block') {
+      window.upload(new FormData(formDesign))
+    } else if (systemFrame.style.display === 'block') {
+      window.upload(new FormData(formSystem))
+    } else if (teamFrame.style.display === 'block') {
+      window.upload(new FormData(formTeam))
+    }
+
     window.load(response);
     if (response.result === true) {
       messageOk.style.display = 'block';
