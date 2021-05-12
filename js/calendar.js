@@ -80,7 +80,6 @@ formLeader.addEventListener('click', () => {
   } else if (leaderGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_4';
   }
-  console.log(URL_SERVER);
 })
 
 const formFinance = document.querySelector('.form-finance');
@@ -99,7 +98,6 @@ formFinance.addEventListener('click', () => {
   } else if (financeGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_4';
   }
-  console.log(URL_SERVER);
 })
 
 const formDesign = document.querySelector('.form-design');
@@ -118,7 +116,6 @@ formDesign.addEventListener('click', () => {
   } else if (designGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_4';
   }
-  console.log(URL_SERVER);
 })
 
 const formSystem = document.querySelector('.form-system');
@@ -137,7 +134,6 @@ formSystem.addEventListener('click', () => {
   } else if (systemGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_4';
   }
-  console.log(URL_SERVER);
 })
 
 
@@ -157,7 +153,6 @@ formTeam.addEventListener('click', () => {
   } else if (teamGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
   }
-  console.log(URL_SERVER);
 })
 
 
@@ -172,65 +167,23 @@ const messageErr = document.querySelector('.error');
 const messageOkBtn = messageOk.querySelector('.form__ok');
 const messageErrBtn = messageErr.querySelector('.form__err');
 
+document.body.addEventListener('click', e => {
+  if (e.target.classList.contains('form__btn')) {
+    e.preventDefault();
+    console.log(URL_SERVER);
+    const xhr = new XMLHttpRequest();
+    // xhr.responseType = `json`;
+    xhr.open(`POST`, URL_SERVER);
+    xhr.send();
 
-formBtns.forEach((formBtn) => {
-  formBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    upload = (data, onSuccess) => {
-      const xhr = new XMLHttpRequest();
-      xhr.responseType = `json`;
-
-      xhr.addEventListener(`load`, () => {
-        onSuccess(xhr.response);
-      });
-
-      xhr.open(`POST`, URL_SERVER);
-      xhr.send(data);
+    xhr.onload = () => {
+      if (JSON.parse(xhr.response).result === true) {
+        messageOk.style.display = 'block';
+      } else {
+        messageErr.style.display = 'block';
+      }
     };
-
-    load = (onSuccess, onError) => {
-      const xhr = new XMLHttpRequest();
-      xhr.responseType = `json`;
-
-      xhr.addEventListener(`load`, () => {
-        if (xhr.status === StatusCode.OK) {
-          onSuccess(xhr.response);
-        } else {
-          onError(`Статус ответа: ${xhr.status} ${xhr.statusText}`);
-        }
-      });
-      xhr.addEventListener(`error`, () => {
-        onError(`Произошла ошибка соединения`);
-      });
-      xhr.addEventListener(`timeout`, () => {
-        onError(`Запрос не успел выполниться за ${xhr.timeout}мс`);
-      });
-
-      xhr.timeout = TIMEOUT_IN_MS;
-
-      xhr.open(`GET`, URL_SERVER);
-      xhr.send();
-    };
-
-
-    if (leaderFrame.style.display === 'block') {
-      upload(new FormData(formLeader))
-    } else if (financeFrame.style.display === 'block') {
-      upload(new FormData(formFinance))
-    } else if (designFrame.style.display === 'block') {
-      upload(new FormData(formDesign))
-    } else if (systemFrame.style.display === 'block') {
-      upload(new FormData(formSystem))
-    } else if (teamFrame.style.display === 'block') {
-      upload(new FormData(formTeam))
-    }
-    load(response);
-    if (response.result === true) {
-      messageOk.style.display = 'block';
-    } else {
-      messageErr.style.display = 'block';
-    }
-  })
+  };
 })
 
 messageOkBtn.addEventListener('click', () => {
