@@ -166,42 +166,6 @@ const StatusCode = {
 };
 const TIMEOUT_IN_MS = 10000;
 
-window.upload = (data, onSuccess) => {
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = `json`;
-
-  xhr.addEventListener(`load`, () => {
-    onSuccess(xhr.response);
-  });
-
-  xhr.open(`POST`, URL_SERVER);
-  xhr.send(data);
-};
-
-window.load = (onSuccess, onError) => {
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = `json`;
-
-  xhr.addEventListener(`load`, () => {
-    if (xhr.status === StatusCode.OK) {
-      onSuccess(xhr.response);
-    } else {
-      onError(`Статус ответа: ${xhr.status} ${xhr.statusText}`);
-    }
-  });
-  xhr.addEventListener(`error`, () => {
-    onError(`Произошла ошибка соединения`);
-  });
-  xhr.addEventListener(`timeout`, () => {
-    onError(`Запрос не успел выполниться за ${xhr.timeout}мс`);
-  });
-
-  xhr.timeout = TIMEOUT_IN_MS;
-
-  xhr.open(`GET`, URL_SERVER);
-  xhr.send();
-};
-
 const formBtns = document.querySelectorAll('.form__btn');
 const messageOk = document.querySelector('.success');
 const messageErr = document.querySelector('.error');
@@ -212,19 +176,55 @@ const messageErrBtn = messageErr.querySelector('.form__err');
 formBtns.forEach((formBtn) => {
   formBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    if (leaderFrame.style.display === 'block') {
-      window.upload(new FormData(formLeader))
-    } else if (financeFrame.style.display === 'block') {
-      window.upload(new FormData(formFinance))
-    } else if (designFrame.style.display === 'block') {
-      window.upload(new FormData(formDesign))
-    } else if (systemFrame.style.display === 'block') {
-      window.upload(new FormData(formSystem))
-    } else if (teamFrame.style.display === 'block') {
-      window.upload(new FormData(formTeam))
-    }
+    upload = (data, onSuccess) => {
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = `json`;
 
-    window.load(response);
+      xhr.addEventListener(`load`, () => {
+        onSuccess(xhr.response);
+      });
+
+      xhr.open(`POST`, URL_SERVER);
+      xhr.send(data);
+    };
+
+    load = (onSuccess, onError) => {
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = `json`;
+
+      xhr.addEventListener(`load`, () => {
+        if (xhr.status === StatusCode.OK) {
+          onSuccess(xhr.response);
+        } else {
+          onError(`Статус ответа: ${xhr.status} ${xhr.statusText}`);
+        }
+      });
+      xhr.addEventListener(`error`, () => {
+        onError(`Произошла ошибка соединения`);
+      });
+      xhr.addEventListener(`timeout`, () => {
+        onError(`Запрос не успел выполниться за ${xhr.timeout}мс`);
+      });
+
+      xhr.timeout = TIMEOUT_IN_MS;
+
+      xhr.open(`GET`, URL_SERVER);
+      xhr.send();
+    };
+
+
+    if (leaderFrame.style.display === 'block') {
+      upload(new FormData(formLeader))
+    } else if (financeFrame.style.display === 'block') {
+      upload(new FormData(formFinance))
+    } else if (designFrame.style.display === 'block') {
+      upload(new FormData(formDesign))
+    } else if (systemFrame.style.display === 'block') {
+      upload(new FormData(formSystem))
+    } else if (teamFrame.style.display === 'block') {
+      upload(new FormData(formTeam))
+    }
+    load(response);
     if (response.result === true) {
       messageOk.style.display = 'block';
     } else {
