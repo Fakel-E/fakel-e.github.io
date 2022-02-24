@@ -75,11 +75,11 @@ formLeader.addEventListener('click', () => {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_1';
   } else if (leaderGroupTwo.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_2';
-  } else if (leaderGroupThree.checked) {
+  } /*else if (leaderGroupThree.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_3';
   } else if (leaderGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/leader_group_4';
-  }
+  }*/
 })
 
 const formFinance = document.querySelector('.form-finance');
@@ -93,11 +93,11 @@ formFinance.addEventListener('click', () => {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_1';
   } else if (financeGroupTwo.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_2';
-  } else if (financeGroupThree.checked) {
+  } /*else if (financeGroupThree.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_3';
   } else if (financeGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/finance_group_4';
-  }
+  }*/
 })
 
 const formDesign = document.querySelector('.form-design');
@@ -111,11 +111,11 @@ formDesign.addEventListener('click', () => {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_1';
   } else if (designGroupTwo.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_2';
-  } else if (designGroupThree.checked) {
+  } /*else if (designGroupThree.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_3';
   } else if (designGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/design_group_4';
-  }
+  }*/
 })
 
 const formSystem = document.querySelector('.form-system');
@@ -129,11 +129,11 @@ formSystem.addEventListener('click', () => {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_1';
   } else if (systemGroupTwo.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_2';
-  } else if (systemGroupThree.checked) {
+  } /*else if (systemGroupThree.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_3';
   } else if (systemGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/system_group_4';
-  }
+  }*/
 })
 
 
@@ -148,11 +148,11 @@ formTeam.addEventListener('click', () => {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_1';
   } else if (teamGroupTwo.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_2';
-  } else if (teamGroupThree.checked) {
+  } /*else if (teamGroupThree.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_3';
   } else if (teamGroupFour.checked) {
     URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
-  }
+  }*/
 })
 
 
