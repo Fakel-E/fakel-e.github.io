@@ -145,13 +145,13 @@ const teamGroupFour = formTeam.querySelector('.fourth-team');
 
 formTeam.addEventListener('click', () => {
   if (teamGroupOne.checked) {
-    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_1';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coaching_group_1';
   } else if (teamGroupTwo.checked) {
-    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_2';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coaching_group_2';
   } /*else if (teamGroupThree.checked) {
-    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_3';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coaching_group_3';
   } else if (teamGroupFour.checked) {
-    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coahing_group_4';
+    URL_SERVER = 'homecreditnew/api/odyssey_handler.js.html?request=event/set/coaching_group_4';
   }*/
 })
 
